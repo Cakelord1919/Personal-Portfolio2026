@@ -1,0 +1,1 @@
+{"name":"personal-portfolio-2026","private":true,"version":"1.0.0","scripts":{"build":"node scripts/build.mjs","start":"node scripts/serve.mjs","check":"node --check scripts/build.mjs && node --check src/main.js && node scripts/check.mjs"},"engines":{"node":">=20"}}

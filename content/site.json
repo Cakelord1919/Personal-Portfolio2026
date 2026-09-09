@@ -1,0 +1,15 @@
+{
+  "name": "CAKELORD",
+  "title": "Cakelord — Personal Portfolio",
+  "description": "Cakelord 的个人作品集。视觉、交互与创意实验。",
+  "siteUrl": "https://cakelord1919.github.io/Personal-Portfolio2026/",
+  "intro": "留一点空间，给新的想法。",
+  "about": "这里将收录我的作品、过程与探索。目前展示的是网站的设计示例，正式作品即将加入。",
+  "contactUrl": "https://github.com/Cakelord1919",
+  "contactLabel": "在 GitHub 找到我",
+  "projects": [
+    {"slug":"form-study","title":"FORM / 形态研究","category":"视觉设计","year":"2026","theme":"form","summary":"圆、留白与重复。以最少的元素，探索画面的节奏。","description":"这是用于预览作品集版式的设计示例，并非已完成的个人项目。未来可以在这里记录项目背景、你的职责、设计过程与最终成果。","image":"","imageAlt":"","demo":true},
+    {"slug":"type-play","title":"TYPE / 字体实验","category":"创意实验","year":"2026","theme":"type","summary":"让文字成为图形，让阅读产生新的方向。","description":"这是字体排版的展示示例。替换为真实作品后，可以介绍字体选择、版式规则，以及不同媒介中的应用。","image":"","imageAlt":"","demo":true},
+    {"slug":"motion-notes","title":"MOVE / 动态笔记","category":"交互设计","year":"2026","theme":"motion","summary":"移动指针，观察形态变化。一次关于响应与节奏的小实验。","description":"这是用于演示交互作品详情页的示例。首页的几何图形会响应鼠标位置；减少动态效果的系统偏好也会得到尊重。","image":"","imageAlt":"","demo":true}
+  ]
+}
