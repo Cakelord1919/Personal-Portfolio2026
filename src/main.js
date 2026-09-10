@@ -51,3 +51,36 @@ if(contactPanel&&contactTrigger&&contactLinks){
   contactPanel.addEventListener('focusout',e=>{if(!contactPanel.contains(e.relatedTarget))setContactOpen(false);});
   document.addEventListener('pointerdown',e=>{if(!contactPanel.contains(e.target))setContactOpen(false);});
 }
+
+const pageTransition=document.querySelector('.page-transition');
+const transitionRoot=document.documentElement;
+const transitionDuration=720;
+const resetTransition=()=>{
+  pageTransition?.classList.add('is-reset');
+  transitionRoot.classList.remove('page-entering','page-entered','page-leaving');
+  requestAnimationFrame(()=>pageTransition?.classList.remove('is-reset'));
+};
+if(pageTransition){
+  if(transitionRoot.classList.contains('page-entering')){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      transitionRoot.classList.remove('page-entering');
+      transitionRoot.classList.add('page-entered');
+      setTimeout(resetTransition,transitionDuration);
+    }));
+  }
+  document.addEventListener('click',event=>{
+    const link=event.target.closest('a');
+    if(!link||event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||link.target||link.hasAttribute('download'))return;
+    const destination=new URL(link.href,location.href);
+    const sameDocument=destination.pathname===location.pathname&&destination.search===location.search;
+    if(destination.origin!==location.origin||!['http:','https:'].includes(destination.protocol)||sameDocument)return;
+    event.preventDefault();
+    if(reduced.matches){location.assign(destination.href);return;}
+    transitionRoot.classList.add('page-leaving');
+    let navigated=false;
+    const navigate=()=>{if(navigated)return;navigated=true;try{sessionStorage.setItem('page-transition','1')}catch{}location.assign(destination.href);};
+    const fallback=setTimeout(navigate,transitionDuration+80);
+    pageTransition.addEventListener('transitionend',()=>{clearTimeout(fallback);navigate();},{once:true});
+  });
+  addEventListener('pageshow',event=>{if(event.persisted)resetTransition();});
+}
