@@ -7,9 +7,9 @@ html.page-entering .page-transition,html.page-leaving .page-transition{transform
 html.page-entered .page-transition{transform:translate3d(-101%,0,0)}
 .page-transition.is-reset{transition:none}
 .transition-mark{position:absolute;left:50%;top:50%;width:clamp(260px,34vw,560px);transform:translate(-50%,-58%)}
-.transition-arrow{display:block;width:100%;height:auto;overflow:visible}.transition-arrow path{fill:none;stroke:var(--ink);stroke-width:32;stroke-linecap:square;stroke-linejoin:miter}
+.transition-arrow{display:block;width:100%;height:auto}
 .transition-signature{position:absolute;right:0;top:calc(100% + 8px);text-align:right;font:700 clamp(11px,.9vw,14px)/1.35 Manrope,Arial,sans-serif;letter-spacing:.03em}
-@media(max-width:600px){.transition-mark{width:min(72vw,360px)}.transition-arrow path{stroke-width:36}.transition-signature{font-size:10px}}
+@media(max-width:600px){.transition-mark{width:min(72vw,360px)}.transition-signature{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.page-transition{display:none}}
 
 .animated-title{font-size:clamp(80px,13vw,210px);min-width:5.1ch;letter-spacing:-.07em}.title-line{display:block;min-height:.92em;line-height:.92;white-space:nowrap}
