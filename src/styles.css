@@ -29,3 +29,7 @@
 .contact-strip>span{opacity:0;transform:translateX(18px);transition:opacity .22s ease,transform .4s ease;transition-delay:calc((3 - var(--order))*65ms)}
 .contact.is-open .contact-strip>span{opacity:1;transform:translateX(0);transition-delay:calc(170ms + var(--order)*75ms)}
 .contact.is-open .contact-strip>.strip-number{opacity:.6}
+
+/* Overlap adjacent compositor layers to cover fractional-pixel grid seams. */
+.contact-links{gap:0;grid-template-rows:repeat(4,minmax(0,1fr))}
+.contact-strip:not(:last-child){margin-bottom:-1px}
