@@ -44,5 +44,23 @@
       "imageAlt": "",
       "demo": true
     }
+  ],
+  "socialLinks": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/eric-gabriel-cheng-li-63609b365/"
+    },
+    {
+      "label": "ArtStation",
+      "url": "https://www.artstation.com/eric-gabriel-cheng-li"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/cakelord114514"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:steamcakelord@gmail.ca"
+    }
   ]
 }

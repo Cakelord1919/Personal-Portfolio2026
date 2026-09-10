@@ -38,3 +38,16 @@ if(titleLines.length===2){
   document.addEventListener('visibilitychange',restart);
   restart();
 }
+
+const contactPanel=document.querySelector('.contact');
+const contactTrigger=document.querySelector('.contact-trigger');
+const contactLinks=document.querySelector('.contact-links');
+if(contactPanel&&contactTrigger&&contactLinks){
+  const setContactOpen=open=>{contactPanel.classList.toggle('is-open',open);contactTrigger.setAttribute('aria-expanded',String(open));contactLinks.inert=!open;};
+  contactPanel.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')setContactOpen(true);});
+  contactPanel.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'&&!contactLinks.contains(document.activeElement))setContactOpen(false);});
+  contactTrigger.addEventListener('click',()=>setContactOpen(contactTrigger.getAttribute('aria-expanded')!=='true'));
+  contactPanel.addEventListener('keydown',e=>{if(e.key==='Escape'){setContactOpen(false);contactTrigger.focus();}});
+  contactPanel.addEventListener('focusout',e=>{if(!contactPanel.contains(e.relatedTarget))setContactOpen(false);});
+  document.addEventListener('pointerdown',e=>{if(!contactPanel.contains(e.target))setContactOpen(false);});
+}
