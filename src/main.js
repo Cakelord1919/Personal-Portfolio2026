@@ -2,7 +2,7 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 const cards=[...document.querySelectorAll('.project')];
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
   document.querySelectorAll('[data-filter]').forEach(b=>{const on=b===button;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
-  cards.forEach(c=>{c.hidden=button.dataset.filter!=='全部'&&c.dataset.category!==button.dataset.filter;});
+  cards.forEach(c=>{c.hidden=button.dataset.filter!=='All'&&c.dataset.category!==button.dataset.filter;});
   document.querySelector('#empty').hidden=cards.some(c=>!c.hidden);
 }));
 const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');reveal.unobserve(e.target);}}),{threshold:.08});
@@ -17,3 +17,24 @@ if(matchMedia('(pointer:fine)').matches){
 const sections=[...document.querySelectorAll('main>section[id]')];
 const active=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('.dock a').forEach(a=>{const on=a.hash==='#'+e.target.id;a.classList.toggle('selected',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}),{rootMargin:'-15% 0px -55% 0px'});
 sections.forEach(e=>active.observe(e));
+
+// Keep both line boxes fixed while typing, and avoid repeated screen-reader announcements.
+const titleLines=[...document.querySelectorAll('[data-title-line]')];
+if(titleLines.length===2){
+  const phrases=[['See','More'],['Scroll','Down']];
+  let phrase=0,length=7,deleting=true,timer;
+  const render=()=>{const [top,bottom]=phrases[phrase];titleLines[0].textContent=top.slice(0,length);titleLines[1].textContent=bottom.slice(0,Math.max(0,length-top.length));};
+  const tick=()=>{
+    if(reduced.matches||document.hidden)return;
+    const total=phrases[phrase].join('').length;
+    length+=deleting?-1:1;render();
+    let delay=deleting?35:120;
+    if(length===0){phrase=(phrase+1)%phrases.length;deleting=false;delay=200;}
+    else if(length===total&&!deleting){deleting=true;delay=2100;}
+    timer=setTimeout(tick,delay);
+  };
+  const restart=()=>{clearTimeout(timer);if(reduced.matches){phrase=0;length=7;deleting=true;render();}else if(!document.hidden)timer=setTimeout(tick,1800);};
+  reduced.addEventListener('change',restart);
+  document.addEventListener('visibilitychange',restart);
+  restart();
+}
