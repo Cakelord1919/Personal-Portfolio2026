@@ -54,10 +54,12 @@ if(contactPanel&&contactTrigger&&contactLinks){
 
 const pageTransition=document.querySelector('.page-transition');
 const transitionRoot=document.documentElement;
-const transitionDuration=720;
+const transitionDuration=520;
 const resetTransition=()=>{
   pageTransition?.classList.add('is-reset');
   transitionRoot.classList.remove('page-entering','page-entered','page-leaving');
+  // Commit the off-screen reset while transitions are disabled, then re-arm it.
+  void pageTransition?.offsetWidth;
   requestAnimationFrame(()=>pageTransition?.classList.remove('is-reset'));
 };
 if(pageTransition){
