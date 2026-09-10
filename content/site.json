@@ -4,21 +4,22 @@
   "description": "Cakelord’s personal portfolio. Visual design, interaction, and creative experiments.",
   "siteUrl": "https://cakelord1919.github.io/Personal-Portfolio2026/",
   "intro": "A space for new ideas.",
-  "about": "A growing collection of my work, process, and explorations. The projects currently shown are layout demos; original work is coming soon.",
+  "about": "I am Eric Gabriel Cheng Li, a game designer, graphic designer, and 3D artist. My work explores how spaces, images, and interactions shape an experience.",
   "contactUrl": "https://github.com/Cakelord1919",
   "contactLabel": "Find me on GitHub",
   "projects": [
     {
-      "slug": "form-study",
-      "title": "FORM / Form Study",
-      "category": "Visual Design",
-      "year": "2026",
+      "slug": "something-lurking",
+      "title": "Something Lurking",
+      "category": "Interaction",
+      "year": "2025",
       "theme": "form",
-      "summary": "Circles, space, and repetition. Exploring rhythm with a minimal set of elements.",
-      "description": "A layout demo for this portfolio, not a completed personal project. This space will introduce the brief, my role, the design process, and the final outcome.",
-      "image": "",
-      "imageAlt": "",
-      "demo": true
+      "summary": "Art direction & level design for a VR journey through an abandoned space station.",
+      "description": "A one-month collaborative VR project exploring scale, environmental storytelling, and psychological tension.",
+      "image": "assets/something-lurking/overview.png",
+      "imageAlt": "Astronaut artwork for Something Lurking, a VR exploration experience",
+      "demo": false,
+      "caseStudy": true
     },
     {
       "slug": "type-play",
@@ -64,4 +65,3 @@
     }
   ]
 }
-
