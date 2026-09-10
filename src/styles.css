@@ -45,3 +45,7 @@ header nav{align-items:center}.nav-logo{display:inline-flex;align-items:center;j
 .hero{isolation:isolate}.hero-gradient{position:absolute;z-index:-1;pointer-events:none;left:38%;top:20px;bottom:0;width:38%;background:linear-gradient(180deg,#ffe500 0%,rgba(255,229,0,.8) 25%,rgba(255,229,0,.35) 62%,rgba(255,229,0,0) 100%)}
 @media(min-width:1600px){.hero-gradient{top:55px}}@media(max-width:800px){.hero-gradient{left:19%;top:145px;width:65%}}
 
+
+/* Align the scroll control with the right edge of its accompanying copy. */
+.hero-note{text-align:right}.hero-note .round-link{margin-left:auto}
+
