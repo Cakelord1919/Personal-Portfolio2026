@@ -14,8 +14,8 @@
 .contact-trigger{display:flex;align-items:center;justify-content:space-between;width:100%;padding:0;border:0;background:transparent;text-align:left;font-size:clamp(90px,15vw,230px);font-weight:800;line-height:.88;letter-spacing:-.08em;margin-top:45px}
 .contact-trigger:focus-visible{outline-offset:8px}
 .contact-links{position:absolute;inset:0;display:grid;grid-template-rows:repeat(4,1fr);pointer-events:none}
-.contact-strip{position:relative;display:flex;align-items:center;gap:28px;padding:20px 4.5%;color:var(--yellow);background:#202020;box-shadow:inset 0 24px 28px -13px #000;transform:translateX(101%);visibility:hidden;transition:transform .65s cubic-bezier(.22,1,.36,1),visibility 0s .65s;transition-delay:calc((3 - var(--order))*45ms);min-height:0}
-.contact.is-open .contact-strip{transform:translateX(0);visibility:visible;transition-delay:calc(var(--order)*75ms)}
+.contact-strip{position:relative;display:flex;align-items:center;gap:28px;padding:20px 4.5%;color:var(--yellow);background:#202020;box-shadow:inset 0 24px 28px -13px #000;transform:translateX(101%);transition:transform .72s cubic-bezier(.65,0,.35,1),background .25s,color .25s;transition-delay:calc(80ms + (3 - var(--order))*65ms),0ms,0ms;min-height:0;will-change:transform}
+.contact.is-open .contact-strip{transform:translateX(0);transition:transform .78s cubic-bezier(.22,1,.36,1),background .25s,color .25s;transition-delay:calc(var(--order)*75ms),0ms,0ms}
 .contact.is-open .contact-links{pointer-events:auto}
 .strip-number{font-size:12px;align-self:flex-start;padding-top:10px;opacity:.6}
 .strip-name{font-size:clamp(32px,5.4vw,80px);font-weight:700;letter-spacing:-.055em;line-height:1.1}
@@ -24,3 +24,8 @@
 .contact-strip[href] .strip-end{font-size:40px}
 .contact-strip[aria-disabled=true]{cursor:default}
 @media(max-width:800px){.contact-trigger{font-size:23vw}.contact-strip{padding:18px 5%;gap:16px}.strip-end{font-size:12px}.strip-number{padding-top:4px}.strip-name{font-size:clamp(28px,8vw,54px)}}
+
+/* Keep panels painted throughout exit; inert handles hidden-link accessibility. */
+.contact-strip>span{opacity:0;transform:translateX(18px);transition:opacity .22s ease,transform .4s ease;transition-delay:calc((3 - var(--order))*65ms)}
+.contact.is-open .contact-strip>span{opacity:1;transform:translateX(0);transition-delay:calc(170ms + var(--order)*75ms)}
+.contact.is-open .contact-strip>.strip-number{opacity:.6}
