@@ -37,3 +37,6 @@
 .brand-logo{display:inline-flex;align-items:center;gap:12px;flex-shrink:0;line-height:1}.brand-logo img{display:block;width:.74em;height:.74em}.brand-logo .brand-name{font-size:inherit;line-height:1;margin:0;vertical-align:baseline}@supports (height:1cap){.brand-logo img{width:1cap;height:1cap}.brand-logo .brand-name{text-box-trim:trim-both;text-box-edge:cap alphabetic}}
 
 
+
+header nav{align-items:center}.nav-logo{display:inline-flex;align-items:center;justify-content:center}.nav-logo img{display:block;width:1em;height:1em}@supports(height:1cap){.nav-logo img{width:1cap;height:1cap}}header nav .nav-logo:after{display:none}
+
