@@ -20,6 +20,20 @@
       "imageAlt": "Astronaut artwork for Something Lurking, a VR exploration experience",
       "demo": false,
       "caseStudy": true
+    },
+    {
+      "slug": "blu",
+      "title": "BLU",
+      "category": "Animation",
+      "year": "2025",
+      "theme": "blu",
+      "summary": "Storyboard and visual development for a wordless 3D animated short.",
+      "description": "A collaborative animated short about curiosity, temptation, and consequence.",
+      "image": "assets/blu/blu-cover.webp",
+      "imageAlt": "A yellow duckling entering the dark forest in BLU",
+      "demo": false,
+      "caseStudy": true,
+      "underConstruction": true
     }
   ],
   "socialLinks": [
