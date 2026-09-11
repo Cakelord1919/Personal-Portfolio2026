@@ -11,7 +11,7 @@ export const renderPersonalGallery = (projects, esc) => {
   return pieces.map((piece, index) => `
     <article id="personal-${piece.area}" class="personal-piece personal-piece-${piece.area} reveal">
       <a href="personal/${esc(piece.project.slug)}/" aria-label="View ${esc(piece.project.title)}">
-        <figure class="personal-piece-media${piece.images.length > 1 ? ' personal-piece-quad' : ''}">
+        <figure class="personal-piece-media${piece.images.length > 1 ? ' personal-piece-composite' : ''}">
           ${piece.images.map((image, imageIndex) => `<img src="${esc(image)}" alt="${esc(piece.project.title)}${piece.images.length > 1 ? ` — image ${imageIndex + 1}` : ''}" loading="lazy">`).join('')}
           <figcaption><span>Open project</span><span>↗</span></figcaption>
         </figure>
