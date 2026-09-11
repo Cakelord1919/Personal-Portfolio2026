@@ -30,7 +30,7 @@ export const renderPersonalDetail = (project, allProjects, esc) => {
   const images = project.images.map((image, imageIndex) => `
     <figure class="personal-detail-figure${imageIndex === 0 ? ' personal-detail-lead' : ''}">
       <img src="../../${esc(image)}" alt="${esc(project.title)} — view ${String(imageIndex + 1).padStart(2, '0')}" loading="${imageIndex === 0 ? 'eager' : 'lazy'}">
-      <figcaption>FIG. ${String(imageIndex + 1).padStart(2, '0')} / ${esc(project.shortTitle)}</figcaption>
+      <figcaption>FIG. ${String(imageIndex + 1).padStart(2, '0')} / ${esc(project.shortTitle)}${project.imageCaptions?.[imageIndex] ? ` / ${esc(project.imageCaptions[imageIndex])}` : ''}</figcaption>
     </figure>`).join('');
 
   return `<section class="personal-detail-intro">

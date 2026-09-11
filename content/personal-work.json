@@ -85,9 +85,10 @@
     "credit": "Environment assets: TheMask Scenebuild Megapack. My contribution: scene assembly, lighting, and composition.",
     "tools": ["Blender"],
     "artstationUrl": "https://www.artstation.com/artwork/AZGo05",
-    "cover": "assets/personal/pt1-01.webp",
-    "coverAlt": "Warm hazy concrete environment surrounded by dense vegetation",
+    "cover": "assets/personal/pt1-02.jpg",
+    "coverAlt": "Level PT-1 Selva de Concreto title artwork",
     "size": "standard",
-    "images": ["assets/personal/pt1-01.webp", "assets/personal/pt1-02.jpg"]
+    "images": ["assets/personal/pt1-02.jpg", "assets/personal/pt1-01.webp"],
+    "imageCaptions": ["TITLE ARTWORK", "ORIGINAL UNEDITED RENDER"]
   }
 ]
