@@ -20,30 +20,6 @@
       "imageAlt": "Astronaut artwork for Something Lurking, a VR exploration experience",
       "demo": false,
       "caseStudy": true
-    },
-    {
-      "slug": "type-play",
-      "title": "TYPE / Type Play",
-      "category": "Creative Experiments",
-      "year": "2026",
-      "theme": "type",
-      "summary": "Words become shapes. A study in type, contrast, and unexpected directions.",
-      "description": "A typography layout demo. A future case study will explore type choices, composition, and applications across different media.",
-      "image": "",
-      "imageAlt": "",
-      "demo": true
-    },
-    {
-      "slug": "motion-notes",
-      "title": "MOVE / Motion Notes",
-      "category": "Interaction Design",
-      "year": "2026",
-      "theme": "motion",
-      "summary": "Move your pointer and watch the shapes respond. An experiment in motion and rhythm.",
-      "description": "An interaction layout demo. The geometric shapes on the homepage respond to pointer movement and respect reduced-motion preferences.",
-      "image": "",
-      "imageAlt": "",
-      "demo": true
     }
   ],
   "socialLinks": [
