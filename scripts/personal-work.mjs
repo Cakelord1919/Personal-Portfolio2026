@@ -38,7 +38,7 @@ export const renderPersonalDetail = (project, allProjects, esc) => {
     <span class="micro">PROJECT NOTE</span>
     <div><p>${esc(project.description)}</p>${project.credit ? `<p class="personal-credit">${esc(project.credit)}</p>` : ''}</div>
   </section>
-  <div class="personal-detail-images">${images}</div>
+  <div class="personal-detail-images${project.slug === 'rotten-inside-banners' ? ' personal-detail-images-grid' : ''}">${images}</div>
   <div class="personal-detail-links">
     <a href="${esc(project.artstationUrl)}" target="_blank" rel="noopener noreferrer">View original on ArtStation ↗</a>
     <a href="../${esc(next.slug)}/">Next personal work — ${esc(next.shortTitle)} ↗</a>
