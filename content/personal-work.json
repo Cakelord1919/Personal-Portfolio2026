@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "marlboro-bolt-action-handgun",
+    "title": "Marlboro Bolt-Action Handgun",
+    "shortTitle": "Bolt-Action Handgun",
+    "year": "2026",
+    "discipline": "3D Prop / Graphic Design",
+    "summary": "A brand-inspired hard-surface prop that turns Marlboro's vintage visual language into a fictional bolt-action handgun.",
+    "description": "This personal study translates the bold geometry, cream-and-red palette, and period character of Marlboro packaging into a fictional weapon. The project moves from hard-surface modelling through material work and presentation, treating the final renders as both a prop showcase and a graphic-design exercise.",
+    "tools": ["Blender", "Substance 3D Painter", "Figma"],
+    "artstationUrl": "https://www.artstation.com/artwork/DLZv89",
+    "cover": "assets/personal/marlboro-01.webp",
+    "coverAlt": "Brand-inspired bolt-action handgun presented against a graphic red background",
+    "size": "wide",
+    "images": [
+      "assets/personal/marlboro-01.webp",
+      "assets/personal/marlboro-02.webp",
+      "assets/personal/marlboro-03.webp"
+    ]
+  },
+  {
+    "slug": "hecor-orbital-weapon",
+    "title": "HECOR — High-Energy Concentration Orbital Weapon",
+    "shortTitle": "HECOR",
+    "year": "2025",
+    "discipline": "3D / Concept Art",
+    "summary": "A speculative orbital weapon developed through modelling, poster design, motion, and fictional technical imagery.",
+    "description": "Built around the SCP Foundation universe, HECOR explores how one fictional device can be communicated across several visual formats. A 3D model anchors the project, while the poster, animated light study, and thaumaturgical engine image extend the object into a larger imagined system.",
+    "tools": ["Blender", "Figma"],
+    "artstationUrl": "https://www.artstation.com/artwork/lGWPPz",
+    "cover": "assets/personal/hecor-01.webp",
+    "coverAlt": "Tall technical poster for the fictional HECOR orbital weapon",
+    "size": "tall",
+    "images": [
+      "assets/personal/hecor-01.webp",
+      "assets/personal/hecor-02.webp",
+      "assets/personal/hecor-03.gif",
+      "assets/personal/hecor-04.webp"
+    ]
+  },
+  {
+    "slug": "site-romero-5-underground",
+    "title": "SCP-9001 Site Romero-5 Underground",
+    "shortTitle": "Site Romero-5",
+    "year": "2025",
+    "discipline": "Environment / Lighting",
+    "summary": "An underground environment study focused on scene building, architectural scale, and directional light.",
+    "description": "This environment interprets the domed underground chamber described in SCP-9001. The scene-building and lighting study uses repeated stone structure, patterned surfaces, fog, and a concentrated overhead opening to establish scale and an uncanny ceremonial atmosphere.",
+    "tools": ["Blender"],
+    "artstationUrl": "https://www.artstation.com/artwork/rlVm9e",
+    "cover": "assets/personal/romero-01.webp",
+    "coverAlt": "Dark domed underground chamber lit by a bright opening overhead",
+    "size": "standard",
+    "images": ["assets/personal/romero-01.webp"]
+  },
+  {
+    "slug": "rotten-inside-banners",
+    "title": "Rotten Inside — Banner Series",
+    "shortTitle": "Rotten Inside",
+    "year": "2025",
+    "discipline": "Graphic Design / Mixed Media",
+    "summary": "A four-part banner system for the Backrooms novel series Rotten Inside, combining typographic hierarchy with ominous world-building.",
+    "description": "The series gives four entries in Rotten Inside a related visual identity while allowing each banner to carry its own place, threat, and mood. Repeated type placement and framing create continuity; changes in imagery, texture, and colour give each chapter a distinct signal.",
+    "tools": ["Figma", "Blender"],
+    "artstationUrl": "https://www.artstation.com/artwork/wreOag",
+    "cover": "assets/personal/rotten-01.webp",
+    "coverAlt": "Graphic banner from the Rotten Inside Backrooms novel series",
+    "size": "wide",
+    "images": [
+      "assets/personal/rotten-01.webp",
+      "assets/personal/rotten-02.webp",
+      "assets/personal/rotten-03.webp",
+      "assets/personal/rotten-04.webp"
+    ]
+  },
+  {
+    "slug": "level-pt-1",
+    "title": "Level PT-1 — Selva de Concreto",
+    "shortTitle": "Level PT-1",
+    "year": "2025",
+    "discipline": "Scene Assembly / Lighting",
+    "summary": "A Backrooms environment imagining Selva de Concreto through dense composition, warm haze, and monumental concrete forms.",
+    "description": "This scene-assembly study focuses on lighting and composition. Third-party environment assets from TheMask Scenebuild Megapack were arranged and lit to shape a humid, overgrown concrete world with a clear path through the frame and a strong sense of depth.",
+    "credit": "Environment assets: TheMask Scenebuild Megapack. My contribution: scene assembly, lighting, and composition.",
+    "tools": ["Blender"],
+    "artstationUrl": "https://www.artstation.com/artwork/AZGo05",
+    "cover": "assets/personal/pt1-01.webp",
+    "coverAlt": "Warm hazy concrete environment surrounded by dense vegetation",
+    "size": "standard",
+    "images": ["assets/personal/pt1-01.webp"]
+  }
+]
