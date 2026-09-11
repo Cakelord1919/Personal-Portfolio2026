@@ -4,9 +4,7 @@ export const renderPersonalGallery = (projects, esc) => {
     { area: 'hero', project: bySlug['marlboro-bolt-action-handgun'], images: [bySlug['marlboro-bolt-action-handgun'].images[0]] },
     { area: 'tower', project: bySlug['hecor-orbital-weapon'], images: [bySlug['hecor-orbital-weapon'].images[0]] },
     { area: 'romero', project: bySlug['site-romero-5-underground'], images: [bySlug['site-romero-5-underground'].images[0]] },
-    { area: 'detail', project: bySlug['marlboro-bolt-action-handgun'], images: [bySlug['marlboro-bolt-action-handgun'].images[2]], label: 'Material / Detail' },
     { area: 'landscape', project: bySlug['level-pt-1'], images: [bySlug['level-pt-1'].images[0]] },
-    { area: 'device', project: bySlug['hecor-orbital-weapon'], images: [bySlug['hecor-orbital-weapon'].images[1]], label: 'Object / Render' },
     { area: 'quad', project: bySlug['rotten-inside-banners'], images: bySlug['rotten-inside-banners'].images }
   ];
 
