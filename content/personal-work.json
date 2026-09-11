@@ -35,6 +35,7 @@
       "assets/personal/hecor-01.webp",
       "assets/personal/hecor-02.webp",
       "assets/personal/hecor-03.gif",
+      "assets/personal/hecor-05.jpg",
       "assets/personal/hecor-04.webp"
     ]
   },
@@ -87,6 +88,6 @@
     "cover": "assets/personal/pt1-01.webp",
     "coverAlt": "Warm hazy concrete environment surrounded by dense vegetation",
     "size": "standard",
-    "images": ["assets/personal/pt1-01.webp"]
+    "images": ["assets/personal/pt1-01.webp", "assets/personal/pt1-02.jpg"]
   }
 ]
