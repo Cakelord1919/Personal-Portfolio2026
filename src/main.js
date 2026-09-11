@@ -52,6 +52,35 @@ if(contactPanel&&contactTrigger&&contactLinks){
   document.addEventListener('pointerdown',e=>{if(!contactPanel.contains(e.target))setContactOpen(false);});
 }
 
+// Add portfolio-specific context to GA4 without delaying navigation.
+document.addEventListener('click',event=>{
+  if(typeof window.gtag!=='function')return;
+  const target=event.target;
+  const filter=target.closest?.('[data-filter]');
+  if(filter){
+    gtag('event','work_filter',{filter_name:filter.dataset.filter});
+    return;
+  }
+  if(target.closest?.('.contact-trigger')){
+    gtag('event','contact_panel_open');
+    return;
+  }
+  const link=target.closest?.('a');
+  if(!link)return;
+  const destination=new URL(link.href,location.href);
+  const pathParts=destination.pathname.split('/').filter(Boolean);
+  const common={link_text:(link.textContent||link.getAttribute('aria-label')||'').trim().replace(/\s+/g,' ').slice(0,100),link_url:destination.href};
+  if(link.classList.contains('project-link')){
+    gtag('event','project_open',{...common,collection:'selected_work',project_slug:pathParts.at(-1)});
+  }else if(link.closest('.personal-piece')){
+    gtag('event','project_open',{...common,collection:'personal_work',project_slug:pathParts.at(-1)});
+  }else if(link.classList.contains('contact-strip')){
+    gtag('event','contact_click',{...common,contact_method:link.querySelector('.strip-name')?.textContent?.trim()||'unknown'});
+  }else if(destination.origin!==location.origin){
+    gtag('event','portfolio_outbound_click',{...common,link_domain:destination.hostname||destination.protocol.replace(':','')});
+  }
+},true);
+
 const pageTransition=document.querySelector('.page-transition');
 const transitionRoot=document.documentElement;
 const transitionDuration=520;
