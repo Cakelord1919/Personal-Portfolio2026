@@ -1,19 +1,30 @@
-export const renderPersonalGallery = (projects, esc) => projects.map((project, index) => `
-  <article class="personal-tile personal-tile-${esc(project.size)} reveal">
-    <a href="personal/${esc(project.slug)}/" aria-label="View ${esc(project.title)}">
-      <figure>
-        <img src="${esc(project.cover)}" alt="${esc(project.coverAlt)}" loading="lazy">
-        <figcaption>
-          <span>${String(index + 1).padStart(2, '0')} / ${esc(project.discipline)}</span>
-          <span>${esc(project.year)}</span>
-        </figcaption>
-      </figure>
-      <div class="personal-tile-copy">
-        <h3>${esc(project.shortTitle)}</h3>
-        <span class="personal-open">Open project ↗</span>
-      </div>
-    </a>
-  </article>`).join('');
+export const renderPersonalGallery = (projects, esc) => {
+  const bySlug = Object.fromEntries(projects.map(project => [project.slug, project]));
+  const pieces = [
+    { area: 'hero', project: bySlug['marlboro-bolt-action-handgun'], images: [bySlug['marlboro-bolt-action-handgun'].images[0]] },
+    { area: 'tower', project: bySlug['hecor-orbital-weapon'], images: [bySlug['hecor-orbital-weapon'].images[0]] },
+    { area: 'romero', project: bySlug['site-romero-5-underground'], images: [bySlug['site-romero-5-underground'].images[0]] },
+    { area: 'detail', project: bySlug['marlboro-bolt-action-handgun'], images: [bySlug['marlboro-bolt-action-handgun'].images[2]], label: 'Material / Detail' },
+    { area: 'landscape', project: bySlug['level-pt-1'], images: [bySlug['level-pt-1'].images[0]] },
+    { area: 'device', project: bySlug['hecor-orbital-weapon'], images: [bySlug['hecor-orbital-weapon'].images[1]], label: 'Object / Render' },
+    { area: 'quad', project: bySlug['rotten-inside-banners'], images: bySlug['rotten-inside-banners'].images }
+  ];
+
+  return pieces.map((piece, index) => `
+    <article id="personal-${piece.area}" class="personal-piece personal-piece-${piece.area} reveal">
+      <a href="personal/${esc(piece.project.slug)}/" aria-label="View ${esc(piece.project.title)}">
+        <figure class="personal-piece-media${piece.images.length > 1 ? ' personal-piece-quad' : ''}">
+          ${piece.images.map((image, imageIndex) => `<img src="${esc(image)}" alt="${esc(piece.project.title)}${piece.images.length > 1 ? ` — image ${imageIndex + 1}` : ''}" loading="lazy">`).join('')}
+          <figcaption><span>Open project</span><span>↗</span></figcaption>
+        </figure>
+        <div class="personal-piece-label">
+          <span>${String(index + 1).padStart(2, '0')} / ${esc(piece.label || piece.project.discipline)}</span>
+          <h3>${esc(piece.project.shortTitle)}</h3>
+          <span>${esc(piece.project.year)}</span>
+        </div>
+      </a>
+    </article>`).join('');
+};
 
 export const renderPersonalDetail = (project, allProjects, esc) => {
   const index = allProjects.findIndex(item => item.slug === project.slug);
