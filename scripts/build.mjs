@@ -29,6 +29,8 @@ const organizationsSection=`<section id="organizations" class="organizations"><d
 const homeWithOrganizationsAndSvgArrows=fs.readFileSync(homePath,'utf8')
   .replace('<section id="contact" class="contact">',`${organizationsSection}<section id="contact" class="contact">`)
   .replace('04 / KEEP IN TOUCH','05 / KEEP IN TOUCH')
+  .replace('<a class="round-link" href="#work" aria-label="Explore selected work">↓</a>','<a class="round-link" href="#work" aria-label="Explore selected work"><span class="hero-svg-arrow" aria-hidden="true"></span></a>')
+  .replaceAll('Contact ↗','Contact <span class="inline-svg-arrow" aria-hidden="true"></span>')
   .replace('<span class="contact-arrow" aria-hidden="true">↗</span>','<span class="contact-arrow contact-svg-arrow" aria-hidden="true"></span>')
   .replaceAll('<span class="strip-end">↗</span>','<span class="strip-end contact-svg-arrow" aria-hidden="true"></span>');
 fs.writeFileSync(homePath,homeWithOrganizationsAndSvgArrows);
