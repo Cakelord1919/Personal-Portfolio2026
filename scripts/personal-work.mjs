@@ -6,7 +6,7 @@ export const renderPersonalGallery = (projects, esc) => {
     { area: 'romero', project: bySlug['site-romero-5-underground'], images: [bySlug['site-romero-5-underground'].images[0]] },
     { area: 'landscape', project: bySlug['level-pt-1'], images: [bySlug['level-pt-1'].images[0]] },
     { area: 'quad', project: bySlug['rotten-inside-banners'], images: bySlug['rotten-inside-banners'].images },
-    { area: 'motion', project: bySlug['mo-chibi-character-showcase'], images: [bySlug['mo-chibi-character-showcase'].images[0]] }
+    { area: 'motion', project: bySlug['mo-chibi-character-showcase'], images: [bySlug['mo-chibi-character-showcase'].cover] }
   ];
 
   return pieces.map((piece, index) => `
