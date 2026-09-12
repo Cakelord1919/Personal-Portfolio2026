@@ -90,5 +90,32 @@
     "size": "standard",
     "images": ["assets/personal/pt1-02.jpg", "assets/personal/pt1-01.webp"],
     "imageCaptions": ["TITLE ARTWORK", "ORIGINAL UNEDITED RENDER"]
+  },
+  {
+    "slug": "mo-chibi-character-showcase",
+    "title": "MO — Chibi Character Showcase",
+    "shortTitle": "MO Character Study",
+    "year": "2025",
+    "discipline": "3D Character / Motion",
+    "summary": "A fan-made chibi character and 25-second showcase animation inspired by SFU VTuber Mo.",
+    "description": "A focused personal study in translating a 2D mascot identity into a simple 3D character and a short presentation piece. I modelled the character in Blender, created a lightweight armature for posing and motion, then assembled the final graphic sequence and timing in After Effects.",
+    "credit": "Fan-made study. The character identity belongs to SFU VTuber Mo; this was not an official commission.",
+    "tools": ["Blender", "After Effects"],
+    "sourceUrl": "https://x.com/cakelord114514/status/1922704104066785292",
+    "sourceLabel": "View original post on X",
+    "video": "assets/personal/mo-showcase.mp4",
+    "cover": "assets/personal/mo-01.png",
+    "coverAlt": "Fan-made chibi character study of SFU VTuber Mo",
+    "size": "standard",
+    "images": [
+      "assets/personal/mo-01.png",
+      "assets/personal/mo-02.png",
+      "assets/personal/mo-03.png"
+    ],
+    "imageCaptions": [
+      "CHARACTER LOOK DEVELOPMENT",
+      "LIGHTWEIGHT CHARACTER RIG",
+      "AFTER EFFECTS COMPOSITING TIMELINE"
+    ]
   }
 ]

@@ -10,7 +10,7 @@ if(!/^https:\/\//.test(site.siteUrl)||!/^https:\/\//.test(site.contactUrl))throw
 if(site.analyticsId&&!/^G-[A-Z0-9]+$/.test(site.analyticsId))throw Error('Invalid Google Analytics measurement ID');
 const slugs=new Set();
 for(const p of site.projects){if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.slug)||slugs.has(p.slug))throw Error('Invalid or duplicate slug');slugs.add(p.slug);if(p.image&&(!/^assets\/[a-zA-Z0-9/_.-]+$/.test(p.image)||p.image.includes('..')||!fs.existsSync('public/'+p.image)))throw Error('Missing/invalid project image');}
-for(const p of personalWork){if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.slug)||slugs.has(p.slug))throw Error('Invalid or duplicate personal work slug');slugs.add(p.slug);for(const image of [p.cover,...p.images]){if(!/^assets\/[a-zA-Z0-9/_.-]+$/.test(image)||image.includes('..')||!fs.existsSync('public/'+image))throw Error(`Missing/invalid personal work image: ${image}`);}}
+for(const p of personalWork){if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.slug)||slugs.has(p.slug))throw Error('Invalid or duplicate personal work slug');slugs.add(p.slug);for(const image of [p.cover,...p.images]){if(!/^assets\/[a-zA-Z0-9/_.-]+$/.test(image)||image.includes('..')||!fs.existsSync('public/'+image))throw Error(`Missing/invalid personal work image: ${image}`);}if(p.video&&(!/^assets\/[a-zA-Z0-9/_.-]+$/.test(p.video)||p.video.includes('..')||!fs.existsSync('public/'+p.video)))throw Error(`Missing/invalid personal work video: ${p.video}`);}
 fs.rmSync('dist',{recursive:true,force:true});
 fs.mkdirSync('dist',{recursive:true});
 for(const f of ['styles.css','main.js'])fs.copyFileSync('src/'+f,'dist/'+f);

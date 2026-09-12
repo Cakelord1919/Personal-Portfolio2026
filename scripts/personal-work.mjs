@@ -5,7 +5,8 @@ export const renderPersonalGallery = (projects, esc) => {
     { area: 'tower', project: bySlug['hecor-orbital-weapon'], images: [bySlug['hecor-orbital-weapon'].images[0]] },
     { area: 'romero', project: bySlug['site-romero-5-underground'], images: [bySlug['site-romero-5-underground'].images[0]] },
     { area: 'landscape', project: bySlug['level-pt-1'], images: [bySlug['level-pt-1'].images[0]] },
-    { area: 'quad', project: bySlug['rotten-inside-banners'], images: bySlug['rotten-inside-banners'].images }
+    { area: 'quad', project: bySlug['rotten-inside-banners'], images: bySlug['rotten-inside-banners'].images },
+    { area: 'motion', project: bySlug['mo-chibi-character-showcase'], images: [bySlug['mo-chibi-character-showcase'].images[0]] }
   ];
 
   return pieces.map((piece, index) => `
@@ -32,6 +33,16 @@ export const renderPersonalDetail = (project, allProjects, esc) => {
       <img src="../../${esc(image)}" alt="${esc(project.title)} — view ${String(imageIndex + 1).padStart(2, '0')}" loading="${imageIndex === 0 ? 'eager' : 'lazy'}">
       <figcaption>FIG. ${String(imageIndex + 1).padStart(2, '0')} / ${esc(project.shortTitle)}${project.imageCaptions?.[imageIndex] ? ` / ${esc(project.imageCaptions[imageIndex])}` : ''}</figcaption>
     </figure>`).join('');
+  const video = project.video ? `
+  <figure class="personal-detail-video">
+    <video controls playsinline preload="metadata">
+      <source src="../../${esc(project.video)}" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+    <figcaption>FINAL FILM / 00:30 / ${esc(project.shortTitle)}</figcaption>
+  </figure>` : '';
+  const sourceUrl = project.sourceUrl || project.artstationUrl;
+  const sourceLabel = project.sourceLabel || 'View original on ArtStation';
 
   return `<section class="personal-detail-intro">
     <span class="micro">PERSONAL WORK / ${esc(project.year)}</span>
@@ -47,9 +58,10 @@ export const renderPersonalDetail = (project, allProjects, esc) => {
     <span class="micro">PROJECT NOTE</span>
     <div><p>${esc(project.description)}</p>${project.credit ? `<p class="personal-credit">${esc(project.credit)}</p>` : ''}</div>
   </section>
-  <div class="personal-detail-images${project.slug === 'rotten-inside-banners' ? ' personal-detail-images-grid' : ''}${project.slug === 'hecor-orbital-weapon' ? ' personal-detail-images-hecor' : ''}">${images}</div>
+  ${video}
+  <div class="personal-detail-images${project.slug === 'rotten-inside-banners' ? ' personal-detail-images-grid' : ''}${project.slug === 'hecor-orbital-weapon' ? ' personal-detail-images-hecor' : ''}${project.slug === 'mo-chibi-character-showcase' ? ' personal-detail-images-mo' : ''}">${images}</div>
   <div class="personal-detail-links">
-    <a href="${esc(project.artstationUrl)}" target="_blank" rel="noopener noreferrer">View original on ArtStation ↗</a>
+    <a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(sourceLabel)} ↗</a>
     <a href="../${esc(next.slug)}/">Next personal work — ${esc(next.shortTitle)} ↗</a>
   </div>`;
 };
