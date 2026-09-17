@@ -35,6 +35,19 @@
       "demo": false,
       "caseStudy": true,
       "underConstruction": true
+    },
+    {
+      "slug": "the-last-of-the-stars",
+      "title": "The Last of the Stars",
+      "category": "Game Design",
+      "year": "2026",
+      "theme": "stars",
+      "summary": "Art and level design for a drawing-driven platformer built during a three-day game jam.",
+      "description": "A collaborative browser game created for the 2026 SFU Summer Summit Game Jam.",
+      "image": "assets/last-of-the-stars/cover.png",
+      "imageAlt": "The Last of the Stars title artwork over an orange collapsing city",
+      "demo": false,
+      "caseStudy": true
     }
   ],
   "socialLinks": [
