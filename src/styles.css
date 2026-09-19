@@ -164,3 +164,22 @@ header nav{align-items:center}.nav-logo{display:inline-flex;align-items:center;j
 
 @media(max-width:900px){.personal-heading{grid-template-columns:1fr 1.5fr}.personal-heading>div{grid-column:2;justify-self:start}.personal-masonry{grid-template-columns:repeat(8,minmax(0,1fr));grid-template-areas:"hero hero hero hero hero hero hero hero" "tower tower tower tower romero romero romero romero" "tower tower tower tower landscape landscape landscape landscape" "quad quad quad quad quad quad quad quad" "motion motion motion motion motion motion motion motion";grid-template-rows:440px 320px 320px 200px 440px;gap:50px 20px}.personal-piece-motion{width:100%}.personal-detail-intro>.micro{grid-column:1/-1}.personal-detail-intro h1{grid-column:1/-1}.personal-detail-intro p{grid-column:1/10}.personal-detail-statement>div{grid-column:4/-1}}
 @media(max-width:600px){header nav{gap:11px;font-size:10px}.personal-work{padding:74px 5% 84px}.personal-heading{display:block;padding-bottom:34px}.personal-heading h2{margin:18px 0 24px}.personal-heading>div{max-width:none}.personal-masonry{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"hero hero" "tower romero" "tower landscape" "quad quad" "motion motion";grid-template-rows:310px 260px 260px 350px 310px;gap:38px 14px;margin-top:32px}.personal-piece-motion{width:100%}.personal-piece-composite{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}.personal-piece-label{gap:6px 10px}.personal-piece-label>span{font-size:8px}.personal-piece-label h3{font-size:17px}.personal-piece-media figcaption{padding:12px 14px;font-size:11px;transform:none;opacity:0;transition:opacity .25s}.personal-piece a:hover figcaption,.personal-piece a:focus-visible figcaption{opacity:1}.personal-detail{padding:24px 5% 70px}.personal-detail-intro{display:block;padding-bottom:36px}.personal-detail-intro h1{font-size:clamp(42px,13vw,68px);margin:18px 0 24px}.personal-detail-intro p{font-size:18px}.personal-detail-facts{grid-template-columns:1fr}.personal-detail-facts div{padding-bottom:8px}.personal-detail-statement{display:block;padding-bottom:42px}.personal-detail-statement>div{margin-top:20px}.personal-detail-statement p{font-size:17px}.personal-detail-video{margin-bottom:38px}.personal-detail-images{display:block}.personal-detail-figure,.personal-detail-figure:nth-child(n){margin:0 0 34px}.personal-detail-links{margin-top:46px}.personal-detail-links a{font-size:19px}.dock{gap:2px;padding:7px}.dock>span{display:none}.dock>a{padding:9px 10px;font-size:12px}}
+
+/* Resume preview and downloads. */
+.resume-header{border-bottom:1px solid var(--line)}
+.resume-page{max-width:1600px;margin:0 auto;padding:54px 4.5% 96px}
+.resume-intro{display:grid;grid-template-columns:1fr 1.65fr 1fr;gap:30px;align-items:end;margin-bottom:44px}
+.resume-intro h1{font-size:clamp(64px,9vw,142px);line-height:.86;letter-spacing:-.075em;margin:0}
+.resume-intro>div{justify-self:end;width:min(100%,410px)}
+.resume-intro p{font-size:16px;line-height:1.65;margin:0 0 22px}
+.resume-actions{display:flex;flex-direction:column;align-items:stretch;gap:10px}
+.resume-actions a{display:flex;justify-content:space-between;background:var(--yellow);padding:14px 17px;font-size:15px;font-weight:800;transition:background-color .2s,color .2s,padding .2s}
+.resume-actions a:hover,.resume-actions a:focus-visible{background:var(--ink);color:white;padding-left:22px;padding-right:22px}
+.resume-preview{margin:0}
+.resume-sheet{display:block;width:min(100%,1100px);margin:0 auto;border:2px solid var(--ink);background:white;box-shadow:16px 16px 0 var(--yellow);overflow:hidden}
+.resume-sheet img{display:block;width:100%;height:auto}
+.resume-preview p{margin:30px 0 0;font-size:13px;color:var(--muted)}
+.resume-preview p a{color:var(--ink);font-weight:700;border-bottom:1px solid currentColor}
+@media(max-width:900px){.resume-intro{grid-template-columns:1fr 1.6fr}.resume-intro>div{grid-column:2;justify-self:start}}
+@media(max-width:600px){.resume-page{padding:38px 5% 72px}.resume-intro{display:block}.resume-intro h1{font-size:20vw;margin:18px 0 28px}.resume-intro>div{width:100%}.resume-sheet{box-shadow:8px 8px 0 var(--yellow)}}
+@media(max-width:380px){header{gap:9px}.wordmark{font-size:14px}header nav{gap:6px;font-size:8px}}
