@@ -185,3 +185,13 @@ header nav{align-items:center}.nav-logo{display:inline-flex;align-items:center;j
 @media(max-width:900px){.resume-intro{grid-template-columns:1fr 1.6fr}.resume-intro>div{grid-column:2;justify-self:start}}
 @media(max-width:600px){.resume-page{padding:38px 5% 72px}.resume-intro{display:block}.resume-intro h1{font-size:20vw;margin:18px 0 28px}.resume-intro>div{width:100%}.resume-sheet{box-shadow:8px 8px 0 var(--yellow)}}
 @media(max-width:380px){header{gap:9px}.wordmark{font-size:14px}header nav{gap:6px;font-size:8px}}
+
+/* Keep small-screen navigation within the viewport. */
+html,body{overflow-x:clip}
+@media(max-width:600px){
+  header{flex-wrap:wrap}
+  header nav{order:3;width:100%;justify-content:space-between;gap:8px}
+  .dock{width:calc(100% - 20px);max-width:430px;justify-content:space-between;gap:0;font-size:clamp(9px,2.6vw,12px)}
+  .dock>a{padding:9px clamp(4px,1.6vw,10px)}
+  .organization-row h3{overflow-wrap:anywhere}
+}
