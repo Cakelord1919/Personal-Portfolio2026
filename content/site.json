@@ -34,7 +34,8 @@
       "imageAlt": "A yellow duckling entering the dark forest in BLU",
       "demo": false,
       "caseStudy": true,
-      "underConstruction": true
+      "underConstruction": true,
+      "unlisted": true
     },
     {
       "slug": "the-last-of-the-stars",
