@@ -5,9 +5,13 @@
     "shortTitle": "Bolt-Action Handgun",
     "year": "2026",
     "discipline": "3D Prop / Graphic Design",
-    "summary": "A brand-inspired hard-surface prop that turns Marlboro's vintage visual language into a fictional bolt-action handgun.",
-    "description": "This personal study translates the bold geometry, cream-and-red palette, and period character of Marlboro packaging into a fictional weapon. The project moves from hard-surface modelling through material work and presentation, treating the final renders as both a prop showcase and a graphic-design exercise.",
-    "tools": ["Blender", "Substance 3D Painter", "Figma"],
+    "summary": "A hard-surface prop that turns Marlboro's vintage visual branding into a fictional bolt-action handgun.",
+    "description": "This personal study translates the bold geometry, white-and-red palette, and distinctive typeface of Marlboro into a fictional weapon. The project showcases my hard-surface modeling and Substance 3D Painter skills.",
+    "tools": [
+      "Blender",
+      "Substance 3D Painter",
+      "Figma"
+    ],
     "artstationUrl": "https://www.artstation.com/artwork/DLZv89",
     "cover": "assets/personal/marlboro-01.webp",
     "coverAlt": "Brand-inspired bolt-action handgun presented against a graphic red background",
@@ -20,13 +24,16 @@
   },
   {
     "slug": "hecor-orbital-weapon",
-    "title": "HECOR — High-Energy Concentration Orbital Weapon",
+    "title": "HECOR / High-Energy Concentration Orbital Weapon",
     "shortTitle": "HECOR",
     "year": "2025",
     "discipline": "3D / Concept Art",
     "summary": "A speculative orbital weapon developed through modelling, poster design, motion, and fictional technical imagery.",
-    "description": "Built around the SCP Foundation universe, HECOR explores how one fictional device can be communicated across several visual formats. A 3D model anchors the project, while the poster, animated light study, and thaumaturgical engine image extend the object into a larger imagined system.",
-    "tools": ["Blender", "Figma"],
+    "description": "Built around the SCP Foundation universe, HECOR is a fictional weapon described in SCP-7600. The long poster represents a scene from that entry. HECOR stands for High-Energy Concentration Orbital Railgun.",
+    "tools": [
+      "Blender",
+      "Figma"
+    ],
     "artstationUrl": "https://www.artstation.com/artwork/lGWPPz",
     "cover": "assets/personal/hecor-01.webp",
     "coverAlt": "Tall technical poster for the fictional HECOR orbital weapon",
@@ -37,7 +44,11 @@
       "assets/personal/hecor-03.gif",
       "assets/personal/hecor-05.jpg",
       "assets/personal/hecor-04.webp"
-    ]
+    ],
+    "quote": "HECOR primarily operates by tracking and locking onto a specified target's coordinates while heating its thaumaturgically-ontokinetic engines, doing so through use of a ritualistic rotation cycle. Upload completion of said circulation, it uses an immense amount of EVE to power its irrilite (a thaumaturgy-conducting metal, entirely excavated from the Earth by the Fae Empire during its peak) rails which proceed to fire a beam of energy with enough power to rival ten atomic detonations. A single shot costs a fortune, of course, and lasts a mere 20 seconds, but it evaporates anything within a 2-kilometer radius of the designated target.",
+    "quoteSource": "SCP-7600 / HECOR Eigenweaponry Briefing",
+    "referenceUrl": "https://scp-wiki.wikidot.com/scp-7600",
+    "referenceLabel": "View the original SCP entry"
   },
   {
     "slug": "site-romero-5-underground",
@@ -45,24 +56,35 @@
     "shortTitle": "Site Romero-5",
     "year": "2025",
     "discipline": "Environment / Lighting",
-    "summary": "An underground environment study focused on scene building, architectural scale, and directional light.",
-    "description": "This environment interprets the domed underground chamber described in SCP-9001. The scene-building and lighting study uses repeated stone structure, patterned surfaces, fog, and a concentrated overhead opening to establish scale and an uncanny ceremonial atmosphere.",
-    "tools": ["Blender"],
+    "summary": "An underground environment study focused on scene building, architectural scale, and 3D lighting.",
+    "description": "I recreated the underground chamber described in SCP-9001. This scene-building and lighting study uses repeated stone structures, patterned surfaces, fog, and a concentrated overhead opening to establish scale and an uncanny ceremonial atmosphere.",
+    "tools": [
+      "Blender"
+    ],
     "artstationUrl": "https://www.artstation.com/artwork/rlVm9e",
     "cover": "assets/personal/romero-01.webp",
     "coverAlt": "Dark domed underground chamber lit by a bright opening overhead",
     "size": "standard",
-    "images": ["assets/personal/romero-01.webp"]
+    "images": [
+      "assets/personal/romero-01.webp"
+    ],
+    "quote": "The door fully opens to reveal a massive, domed chamber; a twenty-sided room walled with stone columns that curve upwards, forming the dome, and a weaving pattern of interlocked stone tiles adorns the interior surface of the vaulted ceiling. The pale white of the fog outside is visible through a small circle of glass at the very top.",
+    "quoteSource": "SCP-9001 / Offset 2",
+    "referenceUrl": "https://scp-wiki.wikidot.com/scp-9001/offset/1",
+    "referenceLabel": "View the original SCP entry"
   },
   {
     "slug": "rotten-inside-banners",
-    "title": "Rotten Inside — Banner Series",
+    "title": "Rotten Inside / Banner Series",
     "shortTitle": "Rotten Inside",
     "year": "2025",
     "discipline": "Graphic Design / Mixed Media",
-    "summary": "A four-part banner system for the Backrooms novel series Rotten Inside, combining typographic hierarchy with ominous world-building.",
-    "description": "The series gives four entries in Rotten Inside a related visual identity while allowing each banner to carry its own place, threat, and mood. Repeated type placement and framing create continuity; changes in imagery, texture, and colour give each chapter a distinct signal.",
-    "tools": ["Figma", "Blender"],
+    "summary": "A four-part banner for the Backrooms novel series Rotten Inside, combining typographic hierarchy with 3D modeling and graphic design to create a narrative across the posters.",
+    "description": "The series gives four entries in Rotten Inside a related visual identity while allowing each banner to carry its own atmosphere.",
+    "tools": [
+      "Figma",
+      "Blender"
+    ],
     "artstationUrl": "https://www.artstation.com/artwork/wreOag",
     "cover": "assets/personal/rotten-01.webp",
     "coverAlt": "Graphic banner from the Rotten Inside Backrooms novel series",
@@ -76,31 +98,42 @@
   },
   {
     "slug": "level-pt-1",
-    "title": "Level PT-1 — Selva de Concreto",
+    "title": "Level PT-1 / Selva de Concreto",
     "shortTitle": "Level PT-1",
     "year": "2025",
     "discipline": "Scene Assembly / Lighting",
     "summary": "A Backrooms environment imagining Selva de Concreto through dense composition, warm haze, and monumental concrete forms.",
-    "description": "This scene-assembly study focuses on lighting and composition. Third-party environment assets from TheMask Scenebuild Megapack were arranged and lit to shape a humid, overgrown concrete world with a clear path through the frame and a strong sense of depth.",
+    "description": "This scene-assembly study focuses on lighting and composition. Third-party environment assets from TheMask Scenebuild Megapack were arranged and lit to shape the concrete-forest office, with a clear path through the frame and a strong sense of depth.",
     "credit": "Environment assets: TheMask Scenebuild Megapack. My contribution: scene assembly, lighting, and composition.",
-    "tools": ["Blender"],
+    "tools": [
+      "Blender"
+    ],
     "artstationUrl": "https://www.artstation.com/artwork/AZGo05",
     "cover": "assets/personal/pt1-02.jpg",
     "coverAlt": "Level PT-1 Selva de Concreto title artwork",
     "size": "standard",
-    "images": ["assets/personal/pt1-02.jpg", "assets/personal/pt1-01.webp"],
-    "imageCaptions": ["TITLE ARTWORK", "ORIGINAL UNEDITED RENDER"]
+    "images": [
+      "assets/personal/pt1-02.jpg",
+      "assets/personal/pt1-01.webp"
+    ],
+    "imageCaptions": [
+      "TITLE ARTWORK",
+      "ORIGINAL UNEDITED RENDER"
+    ]
   },
   {
     "slug": "mo-chibi-character-showcase",
-    "title": "MO — Chibi Character Showcase",
+    "title": "MO / Chibi Character Showcase",
     "shortTitle": "MO Character Study",
     "year": "2025",
     "discipline": "3D Character / Motion",
     "summary": "A fan-made chibi character and 25-second showcase animation inspired by SFU VTuber Mo.",
     "description": "A focused personal study in translating a 2D mascot identity into a simple 3D character and a short presentation piece. I modelled the character in Blender, created a lightweight armature for posing and motion, then assembled the final graphic sequence and timing in After Effects.",
     "credit": "Fan-made study. The character identity belongs to SFU VTuber Mo; this was not an official commission.",
-    "tools": ["Blender", "After Effects"],
+    "tools": [
+      "Blender",
+      "After Effects"
+    ],
     "sourceUrl": "https://x.com/cakelord114514/status/1922704104066785292",
     "sourceLabel": "View original post on X",
     "video": "assets/personal/mo-showcase.mp4",

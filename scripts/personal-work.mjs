@@ -43,6 +43,7 @@ export const renderPersonalDetail = (project, allProjects, esc) => {
   </figure>` : '';
   const sourceUrl = project.sourceUrl || project.artstationUrl;
   const sourceLabel = project.sourceLabel || 'View original on ArtStation';
+  const description = esc(project.description).replace('High-Energy Concentration Orbital Railgun', '<strong>H</strong>igh-<strong>E</strong>nergy <strong>C</strong>oncentration <strong>O</strong>rbital <strong>R</strong>ailgun');
 
   return `<section class="personal-detail-intro">
     <span class="micro">PERSONAL WORK / ${esc(project.year)}</span>
@@ -56,12 +57,13 @@ export const renderPersonalDetail = (project, allProjects, esc) => {
   </dl>
   <section class="personal-detail-statement">
     <span class="micro">PROJECT NOTE</span>
-    <div><p>${esc(project.description)}</p>${project.credit ? `<p class="personal-credit">${esc(project.credit)}</p>` : ''}</div>
+    <div><p>${description}</p>${project.quote ? `<blockquote class="personal-source-quote"><p>${esc(project.quote)}</p><cite>${esc(project.quoteSource || '')}</cite></blockquote>` : ''}${project.credit ? `<p class="personal-credit">${esc(project.credit)}</p>` : ''}</div>
   </section>
   ${video}
   <div class="personal-detail-images${project.slug === 'rotten-inside-banners' ? ' personal-detail-images-grid' : ''}${project.slug === 'hecor-orbital-weapon' ? ' personal-detail-images-hecor' : ''}${project.slug === 'mo-chibi-character-showcase' ? ' personal-detail-images-mo' : ''}">${images}</div>
   <div class="personal-detail-links">
     <a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(sourceLabel)} ↗</a>
+    ${project.referenceUrl ? `<a href="${esc(project.referenceUrl)}" target="_blank" rel="noopener noreferrer">${esc(project.referenceLabel || 'View source')} ↗</a>` : ''}
     <a href="../${esc(next.slug)}/">Next personal work — ${esc(next.shortTitle)} ↗</a>
   </div>`;
 };
